@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+ * 1. Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
  *
  * You may assume that each input would have exactly one solution, and you may not use the same element twice.
  *
@@ -26,13 +26,15 @@ public class TwoSumProblem {
   }
 
   /**
-   * The sum of 2 numbers that matches the target mean that the difference between and target and one number is equal to 2nd number.
+   * The methods help to find tgit he pair of numbers whose sum is equal to the target
+   *
+   * Approach: The sum of 2 numbers that matches the target mean that the difference between and target and one number is equal to 2nd number.
    * Equation : a+b=target, therefore; a = target - b
    * This method uses the above equation to find the pair of 2 such number whose sum is equal to the target.
    *
    * @param nums represents the list of numbers
    * @param target represents a target number which we should get by adding 2 pair of numbers
-   * @return
+   * @return array containing the indexes of the 2 numbers whose sum is equal to the target
    */
   public static int[] twoSum(int[] nums, int target) {
     //Map that will store the nums and their respective indexes
@@ -40,9 +42,8 @@ public class TwoSumProblem {
 
     for(int i=0; i< nums.length; i++) {
       int targetDif = target-nums[i];
-      //Check if the map has the difference. If so then we found the pair which is current num and the targetDif.
-      //Hence, we return the indexes of 2 nu
-      // ms.
+      //Check if the map already contains the difference. If so then we found the pair which is; current num and the targetDif.
+      //Hence, we return the indexes of 2 nums.
       if(numDif.containsKey(targetDif)) {
         return new int[]{numDif.get(targetDif), i};
       }
