@@ -26,7 +26,7 @@ public class TwoSumProblem {
   }
 
   /**
-   * The methods help to find tgit he pair of numbers whose sum is equal to the target
+   * This method help to find the pair of numbers whose sum is equal to the target
    *
    * Approach: The sum of 2 numbers that matches the target mean that the difference between and target and one number is equal to 2nd number.
    * Equation : a+b=target, therefore; a = target - b
